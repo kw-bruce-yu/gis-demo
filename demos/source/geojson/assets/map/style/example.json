@@ -1,0 +1,56 @@
+{
+  "id": "example_style",
+  "name": "Example",
+  "version": 8,
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "sources": {
+    "example_source": {
+      "data": "./assets/map/source/example.geojson",
+      "type": "geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#D8F2FF"
+      }
+    },
+    {
+      "id": "area",
+      "type": "fill",
+      "source": "example_source",
+      "paint": {
+        "fill-color": "#2E9CA3"
+      },
+      "filter": ["==", "type", "area"]
+    },
+    {
+      "id": "character",
+      "type": "fill-extrusion",
+      "source": "example_source",
+      "paint": {
+        "fill-extrusion-color": "#FFFFFF",
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-height": ["get", "height"]
+      },
+      "filter": ["==", "type", "character"]
+    },
+    {
+      "id": "poi",
+      "type": "symbol",
+      "source": "example_source",
+      "layout": {
+        "text-field": "{name}",
+        "text-size": 16
+      },
+      "paint": {
+        "text-color": "#FFFFFF",
+        "text-halo-color": "#2E9CA3",
+        "text-halo-width": 2
+      },
+      "filter": ["==", "type", "poi"]
+    }
+  ]
+}
