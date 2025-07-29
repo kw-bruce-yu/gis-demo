@@ -67,11 +67,11 @@ export default function ThreeModel(options = {}) {
       this.scene = new THREE.Scene();
 
       // 光源
-      const directionalLight1 = new THREE.DirectionalLight(0xffffff, 10);
+      const directionalLight1 = new THREE.DirectionalLight(0xffffff, 15);
       directionalLight1.position.set(0, -70, 50).normalize();
       this.scene.add(directionalLight1);
 
-      const directionalLight2 = new THREE.DirectionalLight(0xffffff, 10);
+      const directionalLight2 = new THREE.DirectionalLight(0xffffff, 15);
       directionalLight2.position.set(0, 70, 50).normalize();
       this.scene.add(directionalLight2);
 

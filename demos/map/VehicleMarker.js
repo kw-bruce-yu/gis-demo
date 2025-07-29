@@ -16,7 +16,7 @@ export default function VehicleMarker() {
   const circleElement = document.createElement('div');
   circleElement.style.width = '100px';
   circleElement.style.height = '100px';
-  circleElement.style.backgroundColor = 'rgba(116, 192, 252, 0.5)';
+  circleElement.style.backgroundColor = '#BAE6FD90';
   circleElement.style.borderRadius = '50%';
 
   // 箭頭元素
@@ -29,7 +29,7 @@ export default function VehicleMarker() {
   arrowElement.style.transform = 'translateX(-50%)';
   arrowElement.style.borderLeft = '10px solid transparent';
   arrowElement.style.borderRight = '10px solid transparent';
-  arrowElement.style.borderBottom = '20px solid #74C0FC';
+  arrowElement.style.borderBottom = '20px solid #bae6fd';
 
   // 位置元素
   const locationElement = document.createElement('div');
