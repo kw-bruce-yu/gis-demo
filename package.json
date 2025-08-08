@@ -1,0 +1,17 @@
+{
+  "name": "gis-demo",
+  "version": "1.0.0",
+  "description": "範例使用 Live Server 即可 Demo。",
+  "type": "module",
+  "scripts": {
+    "transfer": "./scripts/transfer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@turf/convex": "^7.2.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "twd97-to-latlng": "^1.0.0"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "map",
+  "name": "Kingway Map",
+  "version": 8,
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "sources": {
+    "points": {
+      "data": "./assets/map/source/points.geojson",
+      "type": "geojson"
+    },
+    "lineStrings": {
+      "data": "./assets/map/source/lineStrings.geojson",
+      "type": "geojson"
+    },
+    "polygons": {
+      "data": "./assets/map/source/polygons.geojson",
+      "type": "geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#1e293b"
+      }
+    },
+    {
+      "id": "road",
+      "type": "fill",
+      "source": "polygons",
+      "paint": {
+        "fill-color": "#94a3b8"
+      },
+      "filter": ["==", ["get", "type"], "lanelet"]
+    },
+    {
+      "id": "road-outline",
+      "type": "line",
+      "source": "polygons",
+      "paint": {
+        "line-color": "#A2ACC1"
+      },
+      "filter": ["==", ["get", "type"], "lanelet"]
+    },
+    {
+      "id": "path",
+      "type": "line",
+      "source": "lineStrings",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#bae6fd",
+        "line-opacity": 0.2,
+        "line-width": 5
+      },
+      "filter": ["==", ["get", "type"], "line_thin"]
+    }
+  ]
+}
