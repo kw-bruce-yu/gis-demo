@@ -1,0 +1,61 @@
+{
+  "id": "map",
+  "name": "Kingway Map",
+  "version": 8,
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "sources": {
+    "points": {
+      "data": "./assets/map/source/points.geojson",
+      "type": "geojson"
+    },
+    "lineStrings": {
+      "data": "./assets/map/source/lineStrings.geojson",
+      "type": "geojson"
+    },
+    "polygons": {
+      "data": "./assets/map/source/polygons.geojson",
+      "type": "geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#1e293b"
+      }
+    },
+    {
+      "id": "road",
+      "type": "fill",
+      "source": "polygons",
+      "paint": {
+        "fill-color": "#94a3b8"
+      }
+    },
+    {
+      "id": "path",
+      "type": "line",
+      "source": "lineStrings",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#bae6fd",
+        "line-opacity": 0.5,
+        "line-width": 3
+      }
+    },
+    {
+      "id": "dots",
+      "type": "circle",
+      "source": "points",
+      "paint": {
+        "circle-radius": 5,
+        "circle-color": ["get", "color"]
+      },
+      "filter": ["!=", ["get", "color"], null]
+    }
+  ]
+}

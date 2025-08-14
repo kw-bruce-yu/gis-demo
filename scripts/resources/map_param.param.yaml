@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    #HUTUO Field
+      imap_shift_x_: 2765568.859902452211827
+      imap_shift_y_: 282620.554469862079713
+
+    #TSMC Field
+      # imap_shift_x_: 2557275.378759177867323
+      # imap_shift_y_: 174086.345150043314788
