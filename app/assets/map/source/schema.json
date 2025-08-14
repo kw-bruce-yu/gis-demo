@@ -1,0 +1,80 @@
+{
+  "PointFeature": {
+    "local_x": "Array<any>",
+    "local_y": "Array<any>",
+    "ele": "Array<any>",
+    "color": [
+      "yellow",
+      "red",
+      "green"
+    ]
+  },
+  "LineStringFeature": {
+    "type": [
+      "line_thin",
+      "road_border",
+      "stop_line",
+      "traffic_light",
+      "light_bulbs",
+      "parking_space",
+      "parking_exit",
+      "parking_lot"
+    ],
+    "subtype": [
+      "solid",
+      "solid_solid",
+      "dashed_solid",
+      "dashed",
+      "red_yellow_green"
+    ],
+    "lane_change": [
+      "yes"
+    ],
+    "height": [
+      "0.5"
+    ],
+    "width": [
+      "5"
+    ],
+    "area": [
+      "yes"
+    ],
+    "entrance_lane": [
+      "13086"
+    ]
+  },
+  "PolygonFeature": {
+    "type": [
+      "lanelet"
+    ],
+    "subtype": [
+      "road",
+      "trash"
+    ],
+    "speed_limit": [
+      "15",
+      "10",
+      "20"
+    ],
+    "location": [
+      "urban"
+    ],
+    "one_way": [
+      "yes"
+    ],
+    "participant:vehicle": [
+      "yes"
+    ],
+    "KW": "Array<any>",
+    "turn_direction": [
+      "straight",
+      "right",
+      "left"
+    ],
+    "KW1": "Array<any>",
+    "KW2": "Array<any>",
+    "KW3": [
+      "1,+H00S0000AUWw"
+    ]
+  }
+}

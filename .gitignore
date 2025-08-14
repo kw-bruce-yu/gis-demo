@@ -1,6 +1,6 @@
 node_modules
-app/assets/map/source
 
+# app/assets/map/source
 # scripts/resources/*.osm
 # scripts/resources/*.yaml
 # scripts/resources/*.pcd
