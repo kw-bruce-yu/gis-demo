@@ -10,6 +10,7 @@ const BOUNDS = [
 
 
 const { origin } = window.location;
+const basePath = window.location.pathname.includes('gis-demo') ? '/gis-demo' : '';
 
 
 // 地圖樣式（此為方便測試使用）
@@ -22,7 +23,7 @@ const styleJson = {
     "points": {
       "type": "vector",
       "tiles": [
-        origin + "/app/assets/map/source/points/{z}/{x}/{y}.pbf",
+        origin + basePath + "/app/assets/map/source/points/{z}/{x}/{y}.pbf",
       ],
       "maxzoom": MAX_ZOOM,
       "minzoom": MIN_ZOOM,
@@ -31,7 +32,7 @@ const styleJson = {
     "lineStrings": {
       "type": "vector",
       "tiles": [
-        origin + "/app/assets/map/source/line-strings/{z}/{x}/{y}.pbf",
+        origin + basePath + "/app/assets/map/source/line-strings/{z}/{x}/{y}.pbf",
       ],
       "maxzoom": MAX_ZOOM,
       "minzoom": MIN_ZOOM,
@@ -40,7 +41,7 @@ const styleJson = {
     "polygons": {
       "type": "vector",
       "tiles": [
-        origin + "/app/assets/map/source/polygons/{z}/{x}/{y}.pbf",
+        origin + basePath + "/app/assets/map/source/polygons/{z}/{x}/{y}.pbf",
       ],
       "maxzoom": MAX_ZOOM,
       "minzoom": MIN_ZOOM,
